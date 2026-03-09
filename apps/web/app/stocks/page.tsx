@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { ArrowLeft, RefreshCw, Layers } from "lucide-react";
 import { Button } from "@mysuperapp/ui";
+import { getSettings } from "@/lib/settings";
 import { 
   StockSearch, 
   StockList, 
@@ -153,15 +154,17 @@ export default function StocksPage() {
     if (quoteIntervalRef.current) clearInterval(quoteIntervalRef.current);
     if (dataIntervalRef.current) clearInterval(dataIntervalRef.current);
 
-    // Poll quotes every 5 seconds
+    const { quoteIntervalSec, fundamentalsIntervalMin } = getSettings();
+
+    // Poll quotes at configured interval
     quoteIntervalRef.current = setInterval(() => {
       const symbols = watchlistRef.current.map((item) => item.symbol);
       if (symbols.length > 0) {
         fetchQuotes(symbols);
       }
-    }, 5_000);
+    }, quoteIntervalSec * 1_000);
 
-    // Poll fundamentals, watchlist & sectors every 15 minutes
+    // Poll fundamentals, watchlist & sectors at configured interval
     dataIntervalRef.current = setInterval(async () => {
       const [list] = await Promise.all([
         fetchWatchlist(),
@@ -171,7 +174,7 @@ export default function StocksPage() {
       if (symbols.length > 0) {
         fetchFundamentals(symbols);
       }
-    }, 15 * 60_000);
+    }, fundamentalsIntervalMin * 60_000);
   }, [fetchQuotes, fetchFundamentals, fetchWatchlist, fetchSectors]);
 
   const stopPolling = useCallback(() => {
@@ -218,6 +221,16 @@ export default function StocksPage() {
     document.addEventListener("visibilitychange", handleVisibility);
     return () => document.removeEventListener("visibilitychange", handleVisibility);
   }, [fetchQuotes, startPolling, stopPolling]);
+
+  // Restart polling when settings change
+  useEffect(() => {
+    const handleSettingsChange = () => {
+      stopPolling();
+      startPolling();
+    };
+    window.addEventListener("settings-changed", handleSettingsChange);
+    return () => window.removeEventListener("settings-changed", handleSettingsChange);
+  }, [startPolling, stopPolling]);
 
   // Add stocks to watchlist
   const handleAddStocks = async (stocks: Array<{ symbol: string; name: string }>) => {

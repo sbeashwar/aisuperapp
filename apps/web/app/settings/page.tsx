@@ -1,8 +1,26 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { Button, Card, CardContent, CardHeader, CardTitle } from "@mysuperapp/ui";
+import { Button, Card, CardContent, CardHeader, CardTitle, Input } from "@mysuperapp/ui";
+import { getSettings, saveSettings, type AppSettings } from "@/lib/settings";
 
 export default function SettingsPage() {
+  const [settings, setSettings] = useState<AppSettings | null>(null);
+  const [saved, setSaved] = useState(false);
+
+  useEffect(() => {
+    setSettings(getSettings());
+  }, []);
+
+  const handleSave = () => {
+    if (!settings) return;
+    saveSettings(settings);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur">
@@ -52,6 +70,66 @@ export default function SettingsPage() {
               <p className="text-muted-foreground">
                 Customize the look and feel of your super app.
               </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Stock Watchlist</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground">
+                Configure how often stock data refreshes automatically.
+              </p>
+              {settings && (
+                <>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium" htmlFor="quoteInterval">
+                      Quote refresh interval (seconds)
+                    </label>
+                    <Input
+                      id="quoteInterval"
+                      type="number"
+                      min={5}
+                      max={300}
+                      value={settings.quoteIntervalSec}
+                      onChange={(e) =>
+                        setSettings((s) =>
+                          s ? { ...s, quoteIntervalSec: Math.max(5, parseInt(e.target.value) || 10) } : s
+                        )
+                      }
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      How often stock prices update. Minimum 5 seconds.
+                    </p>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium" htmlFor="fundamentalsInterval">
+                      Fundamentals refresh interval (minutes)
+                    </label>
+                    <Input
+                      id="fundamentalsInterval"
+                      type="number"
+                      min={1}
+                      max={60}
+                      value={settings.fundamentalsIntervalMin}
+                      onChange={(e) =>
+                        setSettings((s) =>
+                          s ? { ...s, fundamentalsIntervalMin: Math.max(1, parseInt(e.target.value) || 15) } : s
+                        )
+                      }
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      How often P/E, EPS, market cap, and other fundamentals refresh. Minimum 1 minute.
+                    </p>
+                  </div>
+
+                  <Button onClick={handleSave}>
+                    {saved ? "✓ Saved" : "Save"}
+                  </Button>
+                </>
+              )}
             </CardContent>
           </Card>
 
