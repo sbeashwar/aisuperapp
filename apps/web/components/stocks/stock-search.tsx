@@ -12,9 +12,10 @@ interface SearchResult {
 interface StockSearchProps {
   onAdd: (stocks: SearchResult[]) => void;
   existingSymbols: string[];
+  lastUpdated?: Date | null;
 }
 
-export function StockSearch({ onAdd, existingSymbols }: StockSearchProps) {
+export function StockSearch({ onAdd, existingSymbols, lastUpdated }: StockSearchProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [selected, setSelected] = useState<SearchResult[]>([]);
@@ -232,9 +233,16 @@ export function StockSearch({ onAdd, existingSymbols }: StockSearchProps) {
         </div>
       )}
 
-      {/* Help text */}
+      {/* Timestamp / Help text */}
       <p className="text-xs text-muted-foreground">
-        Tip: Type tickers and press <kbd className="px-1 py-0.5 bg-muted rounded text-[10px]">Space</kbd>, <kbd className="px-1 py-0.5 bg-muted rounded text-[10px]">,</kbd> or <kbd className="px-1 py-0.5 bg-muted rounded text-[10px]">Enter</kbd> to add them. Duplicates are ignored.
+        {lastUpdated ? (
+          <>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-1 animate-pulse" />
+            Updated {lastUpdated.toLocaleTimeString()}
+          </>
+        ) : (
+          <>Tip: Type tickers and press <kbd className="px-1 py-0.5 bg-muted rounded text-[10px]">Space</kbd>, <kbd className="px-1 py-0.5 bg-muted rounded text-[10px]">,</kbd> or <kbd className="px-1 py-0.5 bg-muted rounded text-[10px]">Enter</kbd> to add them.</>
+        )}
       </p>
     </div>
   );

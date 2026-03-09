@@ -378,6 +378,7 @@ export default function StocksPage() {
           <StockSearch
             onAdd={handleAddStocks}
             existingSymbols={watchlist.map((item) => item.symbol)}
+            lastUpdated={lastUpdated}
           />
         </section>
 

@@ -1,5 +1,5 @@
 // MySuperApp Service Worker – network-first with offline fallback
-const CACHE_NAME = "mysuperapp-v2";
+const CACHE_NAME = "mysuperapp-v3";
 const OFFLINE_URL = "/offline";
 
 // Pre-cache the offline page and app shell
@@ -9,6 +9,7 @@ self.addEventListener("install", (event) => {
       cache.addAll([
         "/",
         "/stocks",
+        "/settings",
         "/manifest.json",
         "/icons/icon-192.svg",
         "/icons/icon-512.svg",
@@ -42,23 +43,7 @@ self.addEventListener("fetch", (event) => {
   // For API routes, always go to network (no caching stock data)
   if (request.url.includes("/api/")) return;
 
-  // For Next.js internals (_next/data), use stale-while-revalidate
-  if (request.url.includes("/_next/")) {
-    event.respondWith(
-      caches.open(CACHE_NAME).then((cache) =>
-        cache.match(request).then((cached) => {
-          const fetched = fetch(request).then((response) => {
-            if (response.ok) cache.put(request, response.clone());
-            return response;
-          });
-          return cached || fetched;
-        })
-      )
-    );
-    return;
-  }
-
-  // For page navigations and other assets: network first, cache fallback
+  // For everything (pages, _next/ bundles, assets): network first, cache fallback
   event.respondWith(
     fetch(request)
       .then((response) => {
