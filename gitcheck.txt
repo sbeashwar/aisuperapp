@@ -1,2 +1,0 @@
-﻿8717233 UI improvements: last-updated timestamp, collapsed categories, drill-through detail
-102aace Initial commit: MySuperApp turborepo monorepo
