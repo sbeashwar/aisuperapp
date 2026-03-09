@@ -1,0 +1,464 @@
+[
+  {
+    "id": "POWL-1770618081253",
+    "symbol": "POWL",
+    "name": "POWL",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "GEV-1770618081253",
+    "symbol": "GEV",
+    "name": "GEV",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "BE-1770618081253",
+    "symbol": "BE",
+    "name": "BE",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "SNDK-1770618081253",
+    "symbol": "SNDK",
+    "name": "SNDK",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "VIG-1770618081253",
+    "symbol": "VIG",
+    "name": "VIG",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "VGT-1770618081253",
+    "symbol": "VGT",
+    "name": "VGT",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "ONDS-1770618081253",
+    "symbol": "ONDS",
+    "name": "ONDS",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "AVB-1770618081253",
+    "symbol": "AVB",
+    "name": "AVB",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "NFLX-1770618081253",
+    "symbol": "NFLX",
+    "name": "NFLX",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "SYM-1770618081253",
+    "symbol": "SYM",
+    "name": "SYM",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "USAR-1770618081253",
+    "symbol": "USAR",
+    "name": "USAR",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "ARE-1770618081253",
+    "symbol": "ARE",
+    "name": "ARE",
+    "addedAt": "2026-02-09T06:21:21.253Z"
+  },
+  {
+    "id": "NVT-1770618081253",
+    "symbol": "NVT",
+    "name": "NVT",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "IONQ-1770618081254",
+    "symbol": "IONQ",
+    "name": "IONQ",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "RGTI-1770618081254",
+    "symbol": "RGTI",
+    "name": "RGTI",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "QBTS-1770618081254",
+    "symbol": "QBTS",
+    "name": "QBTS",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "FXAIX-1770618081254",
+    "symbol": "FXAIX",
+    "name": "FXAIX",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "VTV-1770618081254",
+    "symbol": "VTV",
+    "name": "VTV",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "APLD-1770618081254",
+    "symbol": "APLD",
+    "name": "APLD",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "LUMN-1770618081254",
+    "symbol": "LUMN",
+    "name": "LUMN",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "MRVL-1770618081254",
+    "symbol": "MRVL",
+    "name": "MRVL",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "LTBR-1770618081254",
+    "symbol": "LTBR",
+    "name": "LTBR",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "NLR-1770618081254",
+    "symbol": "NLR",
+    "name": "NLR",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "URA-1770618081254",
+    "symbol": "URA",
+    "name": "URA",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "CCJ-1770618081254",
+    "symbol": "CCJ",
+    "name": "CCJ",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "SMR-1770618081254",
+    "symbol": "SMR",
+    "name": "SMR",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "VST-1770618081254",
+    "symbol": "VST",
+    "name": "VST",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "CEG-1770618081254",
+    "symbol": "CEG",
+    "name": "CEG",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "NEE-1770618081254",
+    "symbol": "NEE",
+    "name": "NEE",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "BA-1770618081254",
+    "symbol": "BA",
+    "name": "BA",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "NUGT-1770618081254",
+    "symbol": "NUGT",
+    "name": "NUGT",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "UNG-1770618081254",
+    "symbol": "UNG",
+    "name": "UNG",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "USO-1770618081254",
+    "symbol": "USO",
+    "name": "USO",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "CDNS-1770618081254",
+    "symbol": "CDNS",
+    "name": "CDNS",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "ANET-1770618081254",
+    "symbol": "ANET",
+    "name": "ANET",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "PANW-1770618081254",
+    "symbol": "PANW",
+    "name": "PANW",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "DAL-1770618081254",
+    "symbol": "DAL",
+    "name": "DAL",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "BABA-1770618081254",
+    "symbol": "BABA",
+    "name": "BABA",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "UBER-1770618081254",
+    "symbol": "UBER",
+    "name": "UBER",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "LYFT-1770618081254",
+    "symbol": "LYFT",
+    "name": "LYFT",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "UVXY-1770618081254",
+    "symbol": "UVXY",
+    "name": "UVXY",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "VXX-1770618081254",
+    "symbol": "VXX",
+    "name": "VXX",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "T-1770618081254",
+    "symbol": "T",
+    "name": "T",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "RH-1770618081254",
+    "symbol": "RH",
+    "name": "RH",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "PYPL-1770618081254",
+    "symbol": "PYPL",
+    "name": "PYPL",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "URI-1770618081254",
+    "symbol": "URI",
+    "name": "URI",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "GM-1770618081254",
+    "symbol": "GM",
+    "name": "GM",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "TSLA-1770618081254",
+    "symbol": "TSLA",
+    "name": "TSLA",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "JPM-1770618081254",
+    "symbol": "JPM",
+    "name": "JPM",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "GS-1770618081254",
+    "symbol": "GS",
+    "name": "GS",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "BAC-1770618081254",
+    "symbol": "BAC",
+    "name": "BAC",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "KLAC-1770618081254",
+    "symbol": "KLAC",
+    "name": "KLAC",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "ACLS-1770618081254",
+    "symbol": "ACLS",
+    "name": "ACLS",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "MU-1770618081254",
+    "symbol": "MU",
+    "name": "MU",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "LRCX-1770618081254",
+    "symbol": "LRCX",
+    "name": "LRCX",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "ASML-1770618081254",
+    "symbol": "ASML",
+    "name": "ASML",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "NVDA-1770618081254",
+    "symbol": "NVDA",
+    "name": "NVDA",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "INTC-1770618081254",
+    "symbol": "INTC",
+    "name": "INTC",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "AMD-1770618081254",
+    "symbol": "AMD",
+    "name": "AMD",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "QCOM-1770618081254",
+    "symbol": "QCOM",
+    "name": "QCOM",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "SOXL-1770618081254",
+    "symbol": "SOXL",
+    "name": "SOXL",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "MP-1770618081254",
+    "symbol": "MP",
+    "name": "MP",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "VWO-1770618081254",
+    "symbol": "VWO",
+    "name": "VWO",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "EWZ-1770618081254",
+    "symbol": "EWZ",
+    "name": "EWZ",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "ARGT-1770618081254",
+    "symbol": "ARGT",
+    "name": "ARGT",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "INDA-1770618081254",
+    "symbol": "INDA",
+    "name": "INDA",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "EEM-1770618081254",
+    "symbol": "EEM",
+    "name": "EEM",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "QQQM-1770618081254",
+    "symbol": "QQQM",
+    "name": "QQQM",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "SPY-1770618081254",
+    "symbol": "SPY",
+    "name": "SPY",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "VTI-1770618081254",
+    "symbol": "VTI",
+    "name": "VTI",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "AGNC-1770618081254",
+    "symbol": "AGNC",
+    "name": "AGNC",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "DLR-1770618081254",
+    "symbol": "DLR",
+    "name": "DLR",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "IYR-1770618081254",
+    "symbol": "IYR",
+    "name": "IYR",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "META-1770618081254",
+    "symbol": "META",
+    "name": "META",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "GOOGL-1770618081254",
+    "symbol": "GOOGL",
+    "name": "GOOGL",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "MSFT-1770618081254",
+    "symbol": "MSFT",
+    "name": "MSFT",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  },
+  {
+    "id": "AAPL-1770618081254",
+    "symbol": "AAPL",
+    "name": "AAPL",
+    "addedAt": "2026-02-09T06:21:21.254Z"
+  }
+]

@@ -1,0 +1,65 @@
+name: Deploy to Azure App Service
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  AZURE_WEBAPP_NAME: mysuperapp-web  # ← Change this to your App Service name
+  NODE_VERSION: "20.x"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm turbo run build --filter=@mysuperapp/web
+        env:
+          STANDALONE: "true"
+
+      # Next.js standalone output needs static + public files copied in
+      - name: Prepare standalone package
+        run: |
+          cp -r apps/web/.next/static apps/web/.next/standalone/apps/web/.next/static
+          cp -r apps/web/public apps/web/.next/standalone/apps/web/public
+
+          # Create startup script
+          cat > apps/web/.next/standalone/start.sh << 'EOF'
+          #!/bin/bash
+          cd /home/site/wwwroot/apps/web
+          mkdir -p .data
+          node server.js
+          EOF
+          chmod +x apps/web/.next/standalone/start.sh
+
+      # Zip the standalone output for deployment
+      - name: Create deployment package
+        run: |
+          cd apps/web/.next/standalone
+          zip -r ../../../../deploy.zip .
+
+      - name: Deploy to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ env.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: deploy.zip

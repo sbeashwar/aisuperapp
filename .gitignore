@@ -1,0 +1,54 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+.next
+out
+build
+
+# Database
+*.db
+*.db-journal
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+
+# Debug
+npm-debug.log*
+pnpm-debug.log*
+
+# Turbo
+.turbo
+
+# PWA (generated service workers - our sw.js is hand-written so NOT ignored)
+public/sw.js.map
+public/workbox-*.js
+public/workbox-*.js.map
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+coverage
+
+# Misc
+*.log
+*.tsbuildinfo
+# Deploy artifacts
+.deploy/
+.deploy2/
+deploy.zip
+deploy2.zip
+applogs.zip
+.applogs/
