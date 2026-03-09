@@ -152,6 +152,7 @@ export function StockListView({
 }: StockListViewProps) {
   const [sort, setSort] = useState<SortState>({ field: null, direction: null });
   const [collapsedSectors, setCollapsedSectors] = useState<Set<string>>(new Set());
+  const [initialCollapseApplied, setInitialCollapseApplied] = useState(false);
 
   const peRange = useMemo(() => calculatePERangeFromStocks(stocks), [stocks]);
 
@@ -229,6 +230,14 @@ export function StockListView({
       return next;
     });
   };
+
+  // Default to all collapsed on first load
+  useEffect(() => {
+    if (!initialCollapseApplied && groupBySector && groupedStocks && groupedStocks.length > 0) {
+      setCollapsedSectors(new Set(groupedStocks.map((g) => g.sector)));
+      setInitialCollapseApplied(true);
+    }
+  }, [groupBySector, groupedStocks, initialCollapseApplied]);
 
   const collapseAll = () => {
     if (groupedStocks) {

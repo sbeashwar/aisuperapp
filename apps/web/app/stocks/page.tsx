@@ -339,9 +339,10 @@ export default function StocksPage() {
           </div>
           <div className="flex items-center gap-2">
             {lastUpdated && (
-              <span className="text-xs text-muted-foreground hidden sm:block">
+              <span className="text-xs text-muted-foreground">
                 <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500 mr-1 animate-pulse" />
-                Live &middot; {lastUpdated.toLocaleTimeString()}
+                <span className="hidden sm:inline">Updated </span>
+                {lastUpdated.toLocaleTimeString()}
               </span>
             )}
             <Button
