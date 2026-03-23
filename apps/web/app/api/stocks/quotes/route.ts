@@ -9,9 +9,6 @@ const NO_CACHE_HEADERS = {
   Expires: "0",
 };
 
-// Create a singleton instance
-const yahooFinance = new YahooFinance();
-
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
   const symbols = searchParams.get("symbols");
@@ -26,6 +23,7 @@ export async function GET(request: NextRequest) {
   const symbolList = symbols.split(",").map((s) => s.trim().toUpperCase());
 
   try {
+    const yahooFinance = new YahooFinance();
     const quotes: Record<string, StockQuote> = {};
 
     // Fetch quotes in parallel with batching

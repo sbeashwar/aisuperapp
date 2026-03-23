@@ -9,8 +9,6 @@ const NO_CACHE_HEADERS = {
   Expires: "0",
 };
 
-const yahooFinance = new YahooFinance();
-
 export async function GET(request: NextRequest) {
   const symbol = request.nextUrl.searchParams.get("symbol");
 
@@ -22,6 +20,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
+    const yahooFinance = new YahooFinance();
     const result = await yahooFinance.search(symbol.toUpperCase(), {
       newsCount: 8,
       quotesCount: 0,

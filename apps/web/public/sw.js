@@ -1,5 +1,5 @@
 // MySuperApp Service Worker – network-first with offline fallback
-const CACHE_NAME = "mysuperapp-v3";
+const CACHE_NAME = "mysuperapp-v4";
 const OFFLINE_URL = "/offline";
 
 // Pre-cache the offline page and app shell
